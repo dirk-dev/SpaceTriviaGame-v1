@@ -1,0 +1,27 @@
+html {
+    background-image: url("../images/star-wars-wallpaper-11.jpg");
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 75px;
+
+}
+
+#scoreboard {
+    width: 960px;
+    background-color: white;
+    height: 800px;
+    margin: auto;
+    opacity: .85;
+    box-shadow: 10px 10px 25px black;
+
+}
+
+/* font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif; */
