@@ -3,15 +3,21 @@ Pseudocode
 
 start screen - onclick start button
 
-whn button clicked, go to questions page
+
+when button clicked, go to questions page
 start timer
 decrement timer
-log each selection
+log each user selection
 
 @ timer = 0, disallow any more input
-    display screen with win/loss totals
+hide question screen
+display screen with win/loss totals
 
-    options - restart game
+[possible options - restart game?
+
+    USe JS for logic, JQuery to manipulate HTML
+
+    Don't forget to write a readme!!!
 
     
 */
