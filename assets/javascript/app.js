@@ -3,6 +3,8 @@
 start screen - onclick start button*/
 $(document).ready(function () {
 
+
+
     var correctGuess = 0;
     var wrongGuess = 0;
 
@@ -27,13 +29,13 @@ $(document).ready(function () {
             correctAnswer: "Proxima Centauri"
         },
         {
-            question: "What is the closest star to Earth?",
-            answers: ["Alpha Centauri", "Proxima Centauri", "Barnard's Star"],
-            correctAnswer: "Proxima Centauri"
+            question: "How much larger is the Sun than Earth?",
+            answers: ["750", "5,000", "300,000"],
+            correctAnswer: "300,000"
         },
         {
             question: "How many moons does Jupiter have?",
-            answers: ["79", "8", "14"],
+            answers: ["79", "8", "26"],
             correctAnswer: "79"
         },
         {
@@ -43,7 +45,7 @@ $(document).ready(function () {
         },
         {
             question: "How many planets in our solar system have rings?",
-            answers: ["one", "2", "4"],
+            answers: ["1", "2", "4"],
             correctAnswer: "4"
         },
 
@@ -51,12 +53,52 @@ $(document).ready(function () {
     // removes start button onclick
     $("button").click(function () {
         $("#button1Div").remove();
+        $("#questions").show();
 
     });
 
     //inserts question 1 into the HTML
     $("#question1").text(questions[0].question);
-    $("#answer1A").text(questions[0].answers[0]);
+
+    //inserts answers to radio buttons
+    $("label[for=ans1A]").html(questions[0].answers[0]);
+    $("label[for=ans1B]").html(questions[0].answers[1]);
+    $("label[for=ans1C]").html(questions[0].answers[2]);
+
+    $("#question2").text(questions[1].question);
+    $("label[for=ans2A]").html(questions[1].answers[0]);
+    $("label[for=ans2B]").html(questions[1].answers[1]);
+    $("label[for=ans2C]").html(questions[1].answers[2]);
+
+    $("#question3").text(questions[2].question);
+    $("label[for=ans3A]").html(questions[2].answers[0]);
+    $("label[for=ans3B]").html(questions[2].answers[1]);
+    $("label[for=ans3C]").html(questions[2].answers[2]);
+
+    $("#question4").text(questions[3].question);
+    $("label[for=ans4A]").html(questions[3].answers[0]);
+    $("label[for=ans4B]").html(questions[3].answers[1]);
+    $("label[for=ans4C]").html(questions[3].answers[2]);
+
+    $("#question5").text(questions[4].question);
+    $("label[for=ans5A]").html(questions[4].answers[0]);
+    $("label[for=ans5B]").html(questions[4].answers[1]);
+    $("label[for=ans5C]").html(questions[4].answers[2]);
+
+    $("#question6").text(questions[5].question);
+    $("label[for=ans6A]").html(questions[5].answers[0]);
+    $("label[for=ans6B]").html(questions[5].answers[1]);
+    $("label[for=ans6C]").html(questions[5].answers[2]);
+
+    $("#question7").text(questions[6].question);
+    $("label[for=ans7A]").html(questions[6].answers[0]);
+    $("label[for=ans7B]").html(questions[6].answers[1]);
+    $("label[for=ans7C]").html(questions[6].answers[2]);
+
+    $("#question8").text(questions[7].question);
+    $("label[for=ans8A]").html(questions[7].answers[0]);
+    $("label[for=ans8B]").html(questions[7].answers[1]);
+    $("label[for=ans8C]").html(questions[7].answers[2]);
 
 
 
