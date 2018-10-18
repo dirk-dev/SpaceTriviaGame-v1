@@ -9,16 +9,16 @@ h1 {
     color: white;
     text-align: center;
     font-size: 80px;
-    text-shadow: 0px 0px 15px midnightblue, 2px 2px 15px darkblue, 
-    4px 4px 15px darkcyan, 6px 6px 15px mediumaquamarine, 
-    8px 8px 15px lightcyan,  10px 10px 5px white;
+    text-shadow: 0px 0px 15px midnightblue, 2px 2px 15px darkblue,
+        4px 4px 15px darkcyan, 6px 6px 15px mediumaquamarine,
+        8px 8px 15px lightcyan, 10px 10px 5px white;
     padding: 0px 0px 15px 0px;
 }
 
 #gameBoard {
     width: 960px;
     background-color: white;
-    height: 875px;
+    height: 975px;
     margin: auto;
     opacity: .95;
     box-shadow: 10px 10px 25px black;
@@ -32,31 +32,43 @@ h1 {
 #startButton {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 50px;
-    background-color:green;
+    background-color: green;
     text-align: center;
     color: white;
     width: 200px;
     height: 90px;
     border-radius: 25px;
-   }
+}
+/* hides elements from displaying; this is reversed via jQuery */
+#questions, #timer, #doneButton {
+    visibility: hidden;
+}
 
-   /* wildcard selector for all ids that begin with question */
-   p[id*="question"] {
-       font-weight: bold;
-       line-height: 2;
-   }
+#timer {
+    width: 300px;
+    height: 60px;
+    background-color: darkgrey;
 
-   #doneButton {
+}
+
+
+/* wildcard selector for all ids that begin with question */
+p[id*="question"] {
+    font-weight: bold;
+    line-height: 2;
+}
+
+#doneButton {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 50px;
-    background-color:red;
+    background-color: red;
     text-align: center;
     color: white;
     width: 200px;
     height: 90px;
     border-radius: 25px;
-    margin-top: 300px;
-   }
+    margin-top: 5px;
+}
 
 #button1Div {
     width: 200px;
@@ -64,11 +76,17 @@ h1 {
     padding: 300px 0 0 0;
 }
 
+#timer {
+    font-family: 'Oswald', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+}
+
 #button2Div {
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 
