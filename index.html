@@ -21,13 +21,25 @@
 
     <h1>Space Trivia</h1>
     <br>
-
-    <div id=gameBoard>
+    <!-- HTML elements for the start screen -->
+    <div id=startScreen>
+        <br>
+        <p>Click to start the Space Trivia game.</p>
+        <br>
+        <p>No Googling, please!</p>
         <div id=button1Div><button id=startButton>
                 <p>Start</p>
             </button>
+
         </div>
-        <span id=timer><p>Time Remaining:</p></span>
+    </div>
+
+    <div id=gameBoard>
+
+        <div id=timer>
+            <p><div id=countdown></div>
+            </p>
+        </div>
         <br>
         <div id=questions>
             <form>
@@ -85,15 +97,23 @@
                 <input id="answer8B" type="radio" name="question8"> <label for="ans8B">Answer8B</label>
                 <input id="answer8C" type="radio" name="question8"> <label for="ans8C">Answer8C</label>
             </form>
-
         </div>
         <div id=button2Div><button id=doneButton>
                 <p>Done</p>
             </button>
         </div>
 
+    </div>
+    <div id=scoreScreen>
+        <h2 id=yourScore>Your Score:</h2>
+        <br>
+        <p id=correctAnswers>Correct answers: </p>
+        <p id=wrongAnswers>Incorrect answers: </p>
+        <p id=unanswered>Unanswered questions: </p>
 
     </div>
+
+
 
 
 

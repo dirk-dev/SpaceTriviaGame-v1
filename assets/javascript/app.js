@@ -3,9 +3,10 @@
 start screen - onclick start button*/
 $(document).ready(function () {
 
-    var correctGuess = 0;
-    var wrongGuess = 0;
-    var timer = 0;
+    var correctAnswers = 0;
+    var wrongAnswers = 0;
+    var timer = 10;
+    var intervalId;
 
     var questions = [{
             question: "What constellation is also known as the Seven Sisters?",
@@ -49,18 +50,42 @@ $(document).ready(function () {
         },
 
     ]
+
+    function gameStart() {
+        $("#gameBoard").hide();
+        $("#scoreScreen").hide();
+        console.log("gameStart running");
+    };
+
+    function run() {
+        intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+        timer--;
+        $("#countdown").html("Time remaining: " + timer);
+        if (timer === 0) {
+            $("#gameBoard").remove();
+            $("#scoreScreen").show();
+
+        }
+    }
+   
+
     // removes start button onclick and displays question screen
 
+    gameStart();
+
     $("#startButton").click(function () {
-        $("#button1Div").remove();
-        $("#questions").css("visibility", "visible");
-        $("#timer").css("visibility", "visible");
-        $("#doneButton").css("visibility", "visible");
+        $("#startScreen").hide();
+        $("#gameBoard").show();
+        run();
+        decrement();
+        console.log("start button click running");
 
-        //inserts question 1 into the HTML
+
+        //inserts questions & answers into HTML
         $("#question1").text(questions[0].question);
-
-        //inserts answers to radio buttons
         $("label[for=ans1A]").html(questions[0].answers[0]);
         $("label[for=ans1B]").html(questions[0].answers[1]);
         $("label[for=ans1C]").html(questions[0].answers[2]);
@@ -104,20 +129,16 @@ $(document).ready(function () {
 
     // clears question screen takes user to scoring screen
     $("#doneButton").click(function () {
-        $("#button2Div").remove();
-        $("#questions").css("visibility", "hidden");
-        $("#timer").css("visibility", "hidden");
-        $("#doneButton").css("visibility", "hidden");
-        // $("#button1Div").show();
-        // $("#startButton").css("visibility", "visible");
-
-
+        $("#gameBoard").remove();
+        $("#scoreScreen").show();
+        // $("#startButton").show();
     });
 
 
 
 
 });
+
 /* when button clicked, go to questions page
 start timer
 decrement timer
