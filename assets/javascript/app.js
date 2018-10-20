@@ -2,11 +2,11 @@ console.log("app.js active");
 
 $(document).ready(function () {
 
-    var questionVal;
+    // var questionVal;
     var correctAnswers = 0;
     var wrongAnswers = 0;
     var unanswered = 0;
-    var timer = 9;
+    var timer = 51;
     var intervalId;
 
     var questions = [{
@@ -71,18 +71,35 @@ $(document).ready(function () {
         }
     }
 
-        function scoring() {
-        //note: add for loop to iterate through array
-        questionVal = $('input[name="question0"]:checked').val();
-        console.log("The question value is " + questionVal);
-        if (questionVal == null) {
-            unanswered++;
-        } else if (questionVal == questions[0].correctAnswer) {
-            correctAnswers++
-        } else {
+    function scoring() {
+
+        if ($('input[name="question0"]').val() === (questions[0].correctAnswer)) {
+            correctAnswers++;
+        } else if ($('input[name="question0"]').val() !== (questions[0].correctAnswer)) {
             wrongAnswers++;
-            console.log("c " + correctAnswers + " w " + wrongAnswers);
-        };
+            console.log(questions[0].correctAnswer);
+            console.log("name = " + [name="question0"]);
+        } else {
+            unanswered++;
+        }
+
+        // for (i = 0; 1 < questions.length; i++)
+        //note: add for loop to iterate through array
+        // if ($('input[name="question0"]').val() === (questions[0].correctAnswer)) {
+        //     correctAnswers++;
+        // } else if ($('input[name="question0"]').val() !== (questions[0].correctAnswer)) {
+        //     wrongAnswers++;
+        //     console.log(questions[0].correctAnswer);
+        //     console.log("name = " + [name="question0"]);
+        // } else {
+        //     unanswered++;
+        // }
+        // else if (questionVal === questions[0].correctAnswer) {
+        //     correctAnswers++;
+        // } else {
+        //     wrongAnswers++;
+        //     console.log("c " + correctAnswers + " w " + wrongAnswers);
+        // };
 
         $("#correctAnswers").append(correctAnswers);
         $("#wrongAnswers").append(wrongAnswers);
@@ -153,22 +170,5 @@ $(document).ready(function () {
 
 });
 
-/* ....................when button clicked, go to questions page
-......................start timer
-......................decrement timer
-
-
-log each user selection
-
-if/else if/else for validating answers
-
-................@ timer = 0, disallow any more input
-................hide question screen - jQuery .show/.hide
-................display screen with win/loss totals
-
-[possible options - restart game?
-
-    USe JS for logic, JQuery to manipulate HTML
-
-   
-*/
+//Link to updated portfolio with this game added to the portfolio page:
+// https://dirk-kiesewetter.github.io/Responsive-Portfolio/portfolio.html
