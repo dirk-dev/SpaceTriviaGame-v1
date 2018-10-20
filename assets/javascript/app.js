@@ -78,28 +78,10 @@ $(document).ready(function () {
         } else if ($('input[name="question0"]').val() !== (questions[0].correctAnswer)) {
             wrongAnswers++;
             console.log(questions[0].correctAnswer);
-            console.log("name = " + [name="question0"]);
+            console.log("name = " + [name = "question0"]);
         } else {
             unanswered++;
         }
-
-        // for (i = 0; 1 < questions.length; i++)
-        //note: add for loop to iterate through array
-        // if ($('input[name="question0"]').val() === (questions[0].correctAnswer)) {
-        //     correctAnswers++;
-        // } else if ($('input[name="question0"]').val() !== (questions[0].correctAnswer)) {
-        //     wrongAnswers++;
-        //     console.log(questions[0].correctAnswer);
-        //     console.log("name = " + [name="question0"]);
-        // } else {
-        //     unanswered++;
-        // }
-        // else if (questionVal === questions[0].correctAnswer) {
-        //     correctAnswers++;
-        // } else {
-        //     wrongAnswers++;
-        //     console.log("c " + correctAnswers + " w " + wrongAnswers);
-        // };
 
         $("#correctAnswers").append(correctAnswers);
         $("#wrongAnswers").append(wrongAnswers);
@@ -169,6 +151,3 @@ $(document).ready(function () {
     });
 
 });
-
-//Link to updated portfolio with this game added to the portfolio page:
-// https://dirk-kiesewetter.github.io/Responsive-Portfolio/portfolio.html
