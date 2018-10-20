@@ -1,10 +1,8 @@
 console.log("app.js active");
-/*
 
-start screen - onclick start button*/
 $(document).ready(function () {
 
-    var questionVal = null;
+    var questionVal;
     var correctAnswers = 0;
     var wrongAnswers = 0;
     var unanswered = 0;
@@ -73,9 +71,9 @@ $(document).ready(function () {
         }
     }
 
-    function scoring() {
+        function scoring() {
         //note: add for loop to iterate through array
-        var questionVal = $('input[name="question0"]:checked').val();
+        questionVal = $('input[name="question0"]:checked').val();
         console.log("The question value is " + questionVal);
         if (questionVal == null) {
             unanswered++;
@@ -172,6 +170,5 @@ if/else if/else for validating answers
 
     USe JS for logic, JQuery to manipulate HTML
 
-    Don"t forget to write a readme!!!
    
 */
