@@ -65,6 +65,7 @@ $(document).ready(function() {
     timer--;
     $("#countdown").html("Time remaining: " + timer + " seconds");
     if (timer === 0) {
+      scoring();
       $("#gameBoard").remove();
       $("#scoreScreen").show();
     }
