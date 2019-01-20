@@ -1,12 +1,10 @@
 console.log("app.js active");
 
 $(document).ready(function() {
-  // var questionVal;
   var correctAnswers = 0;
   var wrongAnswers = 0;
   var unanswered = 0;
   var timer = 51;
-  var intervalId;
 
   var questions = [
     {
