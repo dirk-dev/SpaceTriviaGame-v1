@@ -152,6 +152,7 @@ $(document).ready(function() {
 
   // clears question screen takes user to scoring screen
   $("#doneButton").click(function() {
+    timer = 0;
     scoring();
     $("#gameBoard").remove();
     $("#scoreScreen").show();
