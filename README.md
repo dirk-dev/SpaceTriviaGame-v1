@@ -6,7 +6,7 @@
 
 ---
 
-## About Space Trivia
+## About Space Trivia:
 
 The goal of **Space Trivia** is to correctly answer all of the questions by selecting the correct radio button. Wrong answers are scored separately from questions that are not answered. A start button begins the game, and the game ends either when the timer runs out or the user clicks the done button.
 
