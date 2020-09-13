@@ -2,7 +2,7 @@
 
 ![Space Trivia game](./assets/images/triviagame.png)
 
-## [Space Trivia deployed app](https://dirk-kiesewetter.github.io/SpaceTriviaGame-v1/)
+## [Space Trivia deployed app](https://dirk-dev.github.io/SpaceTriviaGame-v1/)
 
 ---
 
